@@ -1,0 +1,28 @@
+<head>
+<script>
+let id = Symbol("id");
+
+let human = {
+    name: "shim",
+    age: 22,
+    [id]: 1,
+}
+
+for (let a in human) {
+    console.log(human[a]);
+    // [id] does not show
+}
+
+let id2 = Symbol.for("iden");
+
+let id3 = Symbol.for("iden");
+
+console.log(id2 === id3);
+console.log(Symbol.keyFor(id2));
+console.log(Symbol.keyFor(id3));
+</script>
+</head>
+
+<body>
+<p>hehe</p>
+</body>

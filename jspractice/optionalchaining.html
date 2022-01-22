@@ -1,0 +1,23 @@
+<head>
+<script>
+function Human(name) {
+    this.name = name;
+    if (name == "심재환") {
+        this.isAdmin = {
+            'status': 'normal',
+            'is': 'true',
+        }
+    }
+}
+
+let a = new Human("심재환");
+let b = new Human("홍길동");
+
+alert(a.isAdmin?.status);
+alert(b.isAdmin?.status);
+</script>
+</head>
+
+<body>
+<p>hehe</p>
+</body>

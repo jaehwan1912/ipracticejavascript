@@ -1,0 +1,21 @@
+<head>
+<script>
+let a = prompt("Tell me your name");
+let b = {
+    name: a,
+};
+
+alert("Hello, " + b.name);
+
+let c = {
+    [b.name]: "some info",
+};
+
+alert("Info: "+c[b.name]);
+alert("심재환" in c);
+</script>
+</head>
+
+<body>
+<p>hehe</p>
+</body>
