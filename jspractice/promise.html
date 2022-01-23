@@ -1,0 +1,17 @@
+<head>
+<script>
+let prom = new Promise((res, rej) => {
+    setTimeout(() => rej("Taked too long!"), 1000);
+    setTimeout(() => res("Good!"), 999);
+});
+
+prom.then(
+    result => console.log(result),
+    err => console.log(err)
+);
+</script>
+</head>
+
+<body>
+<p>hehe</p>
+</body>
