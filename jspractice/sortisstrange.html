@@ -1,0 +1,14 @@
+<head>
+<script>
+let a = [2,4,6,8,10,12,14,16,18,20,22];
+console.log(a.sort()); // .sort with no arguments automatically converts elements to string
+
+let b = [2,4,6,8,10,12,14,16,18,20,22];
+console.log(a.sort((a, b) => {if (a>b) return 1; if (a==b) return 0; if (a<b) return -1;}));
+// Should give a function that takes two values and return 1, 0 and -1 according to priorities
+</script>
+</head>
+
+<body>
+<p>hehe</p>
+</body>

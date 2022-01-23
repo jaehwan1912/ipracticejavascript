@@ -1,0 +1,28 @@
+<head>
+<script>
+function getMaxSubSum(arr) {
+    let largest = 0;
+    let partial = 0;
+
+    for (let a of arr) {
+        partial = Math.max(partial + a, 0);
+        largest = Math.max(largest, partial);
+    }
+
+    return largest;
+
+}
+
+console.log(getMaxSubSum([1,2,3,4,5]));
+console.log(getMaxSubSum([-1, 2, 3, -9]));
+console.log(getMaxSubSum([2, -1, 2, 3, -9]));
+console.log(getMaxSubSum([-1, 2, 3, -9, 11]));
+console.log(getMaxSubSum([-2, -1, 1, 2]));
+console.log(getMaxSubSum([100, -9, 2, -3, 5]));
+console.log(getMaxSubSum([1, 2, 3]));
+</script>
+</head>
+
+<body>
+<p>hehe</p>
+</body>
