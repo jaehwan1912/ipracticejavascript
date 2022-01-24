@@ -1,0 +1,29 @@
+<head>
+<script>
+function* generate_1_to_n(n) {
+    for (let i = 1; i <= n; i++) {
+        yield i;
+    }
+}
+
+let num = 5;
+let generator = generate_1_to_n(num);
+
+for (let i = 0;i<5;i++) {
+    let iter = generator.next();
+    console.log(iter.value);
+    console.log(iter.done);
+}
+
+console.log("done!");
+
+let gen2 = generate_1_to_n(10);
+
+for (let it of gen2) {console.log(it);}
+
+</script>
+</head>
+
+<body>
+<p>hehe</p>
+</body>
