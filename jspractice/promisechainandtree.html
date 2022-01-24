@@ -1,0 +1,27 @@
+<head>
+<script>
+let loadScript = filename => {
+    return new Promise((res, rej) => {
+        let script = document.createElement('script');
+        script.src = filename;
+
+        script.onload = () => res(script);
+        script.onerror = () => rej(new Error(`Loading ${filename} failed...`));
+        document.head.append(script);
+    });
+};
+
+loadScript('script1.js').then(() => loadScript('script2.js'))
+        .then(() => loadScript('script3.js'))
+        .then(a => {
+            console.log("Script loading process succeeded");
+            scr1(); scr2(); scr3();
+        },
+        b => console.log("Script loading process failed"));
+
+</script>
+</head>
+
+<body>
+<p>hehe</p>
+</body>

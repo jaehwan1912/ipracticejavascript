@@ -1,0 +1,28 @@
+<head>
+<script>
+let loadScr = filename => {
+    return new Promise((res, rej) => {
+        let script = document.createElement('script');
+        script.src = filename;
+
+        script.onload = () => res(script);
+        script.onerror = () => rej(new Error(`Loading ${filename} failed...`));
+        document.head.append(script);
+    });
+};
+Promise.allSettled([loadScr('script1.js'), loadScr('script2.js'), loadScr('script3.js')])
+    .then( results => {
+            for (let result of results) {
+                if (result.status == 'fulfilled') console.log("success"); else console.log("failure");
+            }
+            scr1();
+            scr2();
+            scr3();
+        });
+
+</script>
+</head>
+
+<body>
+<p>hehe</p>
+</body>
