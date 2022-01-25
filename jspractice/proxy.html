@@ -1,0 +1,34 @@
+<head>
+<script>
+let ids = [1,2,3,5];
+
+ids = new Proxy(ids, {
+    set(target, property, value) {
+        if (typeof value == 'number') {
+            target[property] = value;
+            return true;
+        } else {
+            return false;
+        }
+    }
+});
+
+try {
+    ids.push("text");
+} catch (error) {
+    console.log(error);
+}
+
+try {
+    ids.push(6);
+} catch (error) {
+    console.log(error);
+}
+
+ids.forEach(a => console.log(a))
+</script>
+</head>
+
+<body>
+<p>hehe</p>
+</body>
