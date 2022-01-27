@@ -1,0 +1,57 @@
+<head>
+
+</head>
+
+<body>
+<h1>This is header 1.</h1>
+<h2>This is header 2.</h2>
+<p>This is a paragraph.</p>
+<ul>
+    <li>
+        <p>This is a list element 1.</p>
+    </li>
+    <li>
+        <p>This is a list element 2.</p>
+    </li>
+    <li>
+        <p>This is a list element 3.</p>
+    </li>
+    <li>
+        <p>This is a list element 4.</p>
+    </li>
+</ul>
+<table id="table">
+    <tr>
+        <td>one</td><td>two</td>
+    </tr>
+    <tr>
+        <td>three</td><td>four</td>
+    </tr>
+    <tr>
+        <td>five</td><td>six</td>
+    </tr>
+</table>
+<p class="thing">What in the</p>
+<h3 class="thing">Name of heaven</h3>
+</body>
+
+<script>
+console.log(document.body.children);
+for (let child of document.body.children){
+    console.log(child.innerText);
+}
+
+let td = table.rows[0].cells[1];
+td.style.backgroundColor = "red";
+
+console.log(document.getElementById("table"));
+
+let things = document.getElementsByClassName("thing");
+for (let el of things) {console.log(el);}
+let querythings = document.querySelectorAll(".thing");
+for (let el of querythings) {console.log(el);}
+console.log("divider");
+console.log(document.querySelector("#table"));
+let bytag = document.getElementsByTagName("li");
+for (let el of bytag) {console.log(el);}
+</script>

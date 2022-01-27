@@ -1,0 +1,15 @@
+<head>
+<title>This is a title</title>
+</head>
+
+<body>
+<h1>This is a header.</h1>
+<p>This is a paragraph.</p>
+</body>
+
+<script>
+document.body.style.background = "blue";
+
+setTimeout(() => {document.body.style.background = ''; document.title = 'Revert to white';}, 2000);
+// Why is title not document.head.title but document.title?
+</script>
