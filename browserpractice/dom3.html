@@ -1,0 +1,29 @@
+<head>
+
+</head>
+
+<body>
+<!--comment is this-->
+<p id="paragraph1">hehe</p>
+</body>
+
+<script id="script1">
+console.log(paragraph1);
+console.dir(paragraph1);
+console.log(paragraph1.constructor.name);
+console.log(script1.constructor.name);
+console.log(paragraph1.nodeName);
+console.log(script1.tagName);
+console.log(document.tagName); //Because it is not an element
+console.log(document.nodeName);
+
+console.log("Divider");
+
+console.log(document.body.innerHTML);
+
+setTimeout(() => document.body.innerHTML = "<!--commentloldude--><h1>This is a header</h1>\n<p>This is a paragraph</p>\n", 1500);
+
+console.log(document.body.outerHTML);
+document.body.firstChild;
+console.log();
+</script>

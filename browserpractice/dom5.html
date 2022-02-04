@@ -1,0 +1,35 @@
+<head>
+
+</head>
+
+<body>
+<div id="div1">
+<h1 id="header1">Header</h1>
+<p>hehe</p>
+</div>
+<div id="div2">
+<h1>Header</h1>
+<p>hehe</p>
+</div>
+<button onclick="onOffBlink('#header1')">Blink!</button>
+</body>
+
+<script>
+function onOffBlink(querySelectorName){
+    obj = document.querySelector(querySelectorName);
+    if (obj.myBlink) {
+        obj.myBlink = false;
+        clearInterval(obj.myBlinkInterval);
+        obj.style['visibility'] = "visible";
+    } else {
+        obj.myBlink = true;
+        obj.myBlinkInterval = setInterval(() => {
+                    if (obj.style['visibility'] == 'visible') {
+                        obj.style['visibility'] = 'hidden';
+                    } else {
+                        obj.style['visibility'] = 'visible';
+                    }
+                }, 500);
+    }
+}
+</script>
