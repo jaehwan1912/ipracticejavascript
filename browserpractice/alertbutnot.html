@@ -1,0 +1,14 @@
+<head>
+
+</head>
+
+<body>
+<p>hehe</p>
+</body>
+
+<script>
+let msgDiv = document.createElement('div');
+msgDiv.className = 'msg';
+msgDiv.innerHTML = '<strong>New message!</strong> It\'s for test purpose.';
+setTimeout(() => document.body.prepend(msgDiv), 1000);
+</script>

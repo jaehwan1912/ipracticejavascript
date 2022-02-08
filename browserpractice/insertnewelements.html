@@ -1,0 +1,49 @@
+<head>
+
+</head>
+
+<body>
+<p>hehe</p>
+<ol id="some_list">
+    <li id="one">one</li>
+    <li id="two">two</li>
+    <li id="three">three</li>
+</ol>
+</body>
+
+<script>
+function delay() {
+    let ls = document.querySelector("#some_list");
+
+    let bf = document.createElement('p');
+    bf.innerHTML = "before";
+    let af = document.createElement('p');
+    af.innerHTML = "after";
+    let pre = document.createElement('li');
+    pre.innerHTML = "zero";
+    let app = document.createElement('li');
+    app.innerHTML = "four";
+
+    ls.before(bf);
+    ls.after(af);
+    ls.prepend(pre);
+    ls.append(app);
+}
+
+function delay2() {
+    let li_two = document.querySelector("#two");
+
+    let one_point_five = document.createElement('li');
+    one_point_five.innerHTML = "one point five";
+
+    li_two.before(one_point_five)
+    li_two.after('<li>two point five</li>');
+    // before, after, prepend, append inserts as is (pure text).
+    // upper does not insert a li element, it inserts a textnode with above text.
+
+}
+
+setTimeout(() => delay(), 1000)
+setTimeout(() => delay2(), 2000)
+
+</script>
