@@ -1,0 +1,27 @@
+<head>
+
+</head>
+
+<body>
+<p>hehe</p>
+<ul id="unordered_list">
+    <li id="one">one</li>
+    <li id="two">two</li>
+    <li id="three">three</li>
+</ul>
+</body>
+
+<script>
+function delay1() {
+    let ul = document.querySelector("#unordered_list");
+
+    let li_one = document.querySelector('#one');
+
+    let copy = li_one.cloneNode(true);
+
+    ul.append(copy);
+}
+
+setTimeout(() => delay1(), 1000);
+
+</script>
