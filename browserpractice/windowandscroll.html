@@ -1,0 +1,104 @@
+<head>
+
+<style>
+    #para {
+        border-style: solid;
+    }
+</style>
+</head>
+
+<script>
+function showDim() {
+    console.clear();    
+}
+
+function move() {
+
+    showDim();
+    return
+}
+</script>
+
+<body id="body">
+    <button onclick='move()'>Move!</button>
+    <p id="para">hehe</p>
+    <p>placeholder</p>
+    <p>placeholder</p>
+    <p>placeholder</p>
+    <p>placeholder</p>
+    <p>placeholder</p>
+    <p>placeholder</p>
+    <p>placeholder</p>
+    <p>placeholder</p>
+    <p>placeholder</p>
+    <p>placeholder</p>
+    <p>placeholder</p>
+    <p>placeholder</p>
+    <p>placeholder</p>
+    <p>placeholder</p>
+    <p>placeholder</p>
+    <p>placeholder</p>
+    <p>placeholder</p>
+    <p>placeholder</p>
+    <p>placeholder</p>
+    <p id="long">placeholderaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+    <p>placeholder</p>
+    <p>placeholder</p>
+    <p>placeholder</p>
+    <p>placeholder</p>
+    <p>placeholder</p>
+    <p>placeholder</p>
+    <p>placeholder</p>
+    <p>placeholder</p>
+    <p>placeholder</p>
+    <p>placeholder</p>
+    <p>placeholder</p>
+    <p>placeholder</p>
+    <p>placeholder</p>
+    <p>placeholder</p>
+    <p>placeholder</p>
+    <p>placeholder</p>
+    <p>placeholder</p>
+    <p>placeholder</p>
+    <p>placeholder</p>
+    <p>placeholder</p>
+    <p>placeholder</p>
+</body>
+
+<script>
+
+console.log("just window width/height");
+console.log(window.innerWidth);
+console.log(window.innerHeight);
+
+console.log("document total width/height except scrollbar");
+console.log(document.documentElement.clientWidth);
+console.log(document.documentElement.clientHeight);
+
+console.log("all height values")
+
+let f = (thing) => {
+    console.log(thing);
+}
+
+f(document.body.scrollHeight);
+f(document.body.offsetHeight);
+f(document.body.clientHeight);
+f(document.documentElement.scrollHeight);
+f(document.documentElement.offsetHeight);
+f(document.documentElement.clientHeight);
+
+f("current scroll state");
+f(document.documentElement.scrollLeft);
+f(document.documentElement.scrollTop);
+
+f("scroll");
+f(window.pageYOffset);
+f(window.pageXOffset);
+
+document.querySelector("#long").scrollLeft = 20;
+
+setTimeout(() => window.scrollTo(20, 20), 1000);
+setTimeout(() => window.scrollBy(40, 40),2000);
+setTimeout(()=>long.scrollIntoView(),3000);
+</script>

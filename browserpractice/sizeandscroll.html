@@ -1,0 +1,57 @@
+<head>
+
+<style>
+    #para {
+        border-style: solid;
+    }
+</style>
+</head>
+
+<script>
+function showDim() {
+    console.clear();    
+
+    console.log('offsetLeft/Top');
+    console.log(p.offsetLeft);
+    console.log(p.offsetTop);
+    console.log("offsetWidth/Height");
+    console.log(p.offsetWidth);
+    console.log(p.offsetHeight);
+    console.log('clientTop/Left');
+    console.log(p.clientTop);
+    console.log(p.clientLeft);
+    console.log('clientWidth/Height');
+    console.log(p.clientWidth);
+    console.log(p.clientHeight);
+}
+
+function move() {
+
+    showDim();
+    return
+}
+</script>
+
+<body id="body">
+    <button onclick='move()'>Move!</button>
+    <p id="para">hehe</p>
+</body>
+
+<script>
+let p = document.querySelector("#para");
+
+console.log(p.offsetParent.id);
+console.log('offsetLeft/Top');
+console.log(p.offsetLeft);
+console.log(p.offsetTop);
+console.log("offsetWidth/Height");
+console.log(p.offsetWidth);
+console.log(p.offsetHeight);
+console.log('clientTop/Left');
+console.log(p.clientTop);
+console.log(p.clientLeft);
+console.log('clientWidth/Height');
+console.log(p.clientWidth);
+console.log(p.clientHeight);
+
+</script>
