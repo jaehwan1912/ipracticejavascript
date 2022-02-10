@@ -1,0 +1,66 @@
+<head>
+
+</head>
+
+<body>
+<p>hehe</p>
+<p id="first">placeholder</p>
+<p>placeholder</p>
+<p>placeholder</p>
+<p>placeholder</p>
+<p>placeholder</p>
+<p>placeholder</p>
+<p>placeholder</p>
+<p>placeholder</p>
+<p>placeholder</p>
+<p>placeholder</p>
+<p>placeholder</p>
+<p>placeholder</p>
+<p>placeholder</p>
+<p>placeholder</p>
+<p>placeholder</p>
+<p>placeholder</p>
+<p>placeholder</p>
+<p>placeholder</p>
+<p>placeholder</p>
+<p>placeholder</p>
+<p>placeholder</p>
+<p>placeholder</p>
+<p>placeholder</p>
+<p>placeholder</p>
+<p>placeholder</p>
+<p id="middle">placeholder</p>
+<p>placeholder</p>
+<p>placeholder</p>
+<p>placeholder</p>
+<p>placeholder</p>
+<p>placeholder</p>
+<p>placeholder</p>
+<p>placeholder</p>
+<p>placeholder</p>
+<p>placeholder</p>
+<p>placeholder</p>
+<p>placeholder</p>
+<p>placeholder</p>
+<p>placeholder</p>
+<p>placeholder</p>
+<p id="last">placeholder</p>
+</body>
+
+<script>
+function p(thing){
+    console.log(thing);
+}
+</script>
+
+<script>
+//p(first);
+//p(last);
+//p(middle);
+p(first.getBoundingClientRect());
+p(document.elementFromPoint(20, 80));
+let msq = middle.getBoundingClientRect();
+p(document.elementFromPoint(msq.left + msq.width/2, msq.top + msq.height/2));
+let fsq = first.getBoundingClientRect();
+p(document.elementFromPoint(fsq.left + fsq.width/2, fsq.top + fsq.height/2));
+</script>

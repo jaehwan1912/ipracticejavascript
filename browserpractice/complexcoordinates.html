@@ -1,0 +1,75 @@
+<head>
+
+</head>
+
+<script>
+function showhide() {
+    let sq = hehe.getBoundingClientRect();
+
+    let msg = document.createElement('div');
+    msg.style.cssText = "position:absolute; color:blue;";
+    msg.innerHTML = 'This is a fixed message!';
+
+    let h = document.querySelector("#hehe");
+
+    if(h.showmessage == "") {
+        msg.style.left = String(Number(sq.left) + 20) + "px";
+        msg.style.top = String(Number(sq.bottom) + 20) + "px";
+        document.body.append(msg);
+        h.showmessage = msg;
+
+    } else {
+        h.showmessage.remove();
+        h.showmessage = "";
+    }
+}
+</script>
+
+<body>
+<button onclick='showhide()'>Show/Hide</button>
+<p id="hehe">hehe</p>
+<p>placeHolder</p>
+<p>placeHolder</p>
+<p>placeHolder</p>
+<p>placeHolder</p>
+<p>placeHolder</p>
+<p>placeHolder</p>
+<p>placeHolder</p>
+<p>placeHolder</p>
+<p>placeHolder</p>
+<p>placeHolder</p>
+<p>placeHolder</p>
+<p>placeHolder</p>
+<p>placeHolder</p>
+<p>placeHolder</p>
+<p>placeHolder</p>
+<p>placeHolder</p>
+<p>placeHolder</p>
+<p>placeHolder</p>
+<p>placeHolder</p>
+<p>placeHolder</p>
+<p>placeHolder</p>
+<p>placeHolder</p>
+<p>placeHolder</p>
+<p>placeHolder</p>
+<p>placeHolder</p>
+<p>placeHolder</p>
+<p>placeHolder</p>
+<p>placeHolder</p>
+<p>placeHolder</p>
+<p>placeHolder</p>
+<p>placeHolder</p>
+<p>placeHolder</p>
+<p>placeHolder</p>
+<p>placeHolder</p>
+<p>placeHolder</p>
+<p>placeHolder</p>
+<p>placeHolder</p>
+<p>placeHolder</p>
+<p>placeHolder</p>
+<p>placeHolder</p>
+</body>
+
+<script>
+hehe.showmessage = "";
+</script>
