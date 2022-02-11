@@ -13,8 +13,8 @@ function showhide() {
     let h = document.querySelector("#hehe");
 
     if(h.showmessage == "") {
-        msg.style.left = String(Number(sq.left) + 20) + "px";
-        msg.style.top = String(Number(sq.bottom) + 20) + "px";
+        msg.style.left = String(Number(sq.left) + window.pageXOffset) + "px";
+        msg.style.top = String(Number(sq.bottom) + window.pageYOffset) + "px";
         document.body.append(msg);
         h.showmessage = msg;
 
