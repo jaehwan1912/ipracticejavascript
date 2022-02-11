@@ -1,0 +1,38 @@
+<head>
+
+</head>
+
+<script>
+
+</script>
+
+<body>
+<!--As HTML Attribute-->
+<button id="btn" onclick="console.log('hehe made you click')">Press the button</button>
+<div/>
+<button id="listen">Fancy EventListener button</button>
+<p id="hehe">hehe</p>
+</body>
+
+<script>
+// click, contextmenu, mouseover, mouseout, mousedown, mouseup, mousemove
+// keydown, keyup
+// submit, focus
+// DOMContentLoaded
+// transitionend
+let b = document.querySelector('#btn');
+let mouseonfunc = () => {
+    console.log("Mouse on button");
+}
+let mouseofffunc = () => {
+    console.log("Mouse off button");
+}
+// Direct attribute
+b.onmouseover = mouseonfunc;
+b.onmouseout = mouseofffunc;
+
+let f = document.querySelector('#listen');
+// addEventListener (This is better probably)
+f.addEventListener('mouseover', mouseonfunc, {once: true});
+f.addEventListener('mouseout', mouseofffunc, {once: true});
+</script>
