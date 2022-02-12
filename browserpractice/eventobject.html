@@ -1,0 +1,34 @@
+<head>
+
+</head>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => console.log('loaded'));
+</script>
+
+<body>
+<button id="btn">Press the button</button>
+<button id="btn2">Second button</button>
+<p id="hehe">hehe</p>
+</body>
+
+<script>
+let b = document.querySelector('#btn');
+let b2 = document.querySelector('#btn2');
+
+let f = (event) => {
+    console.log(event);
+    console.log(event.type);
+}
+
+let f2 = (event) => {
+    console.log(event);
+    console.log(event.type);
+}
+
+b.addEventListener('click', f);
+
+b2.addEventListener('click', f);
+b2.addEventListener('click', f2, {once:true});
+
+</script>

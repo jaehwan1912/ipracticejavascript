@@ -1,0 +1,23 @@
+<head>
+
+</head>
+
+<script>
+
+</script>
+
+<body>
+<button id="btn">Press the button</button>
+<p id="hehe">hehe</p>
+</body>
+
+<script>
+let b = document.querySelector("#btn");
+let handler = {
+    handleEvent(event) {
+        console.log(event.type + " at " + event.currentTarget);
+    }
+};
+
+b.addEventListener('click', handler);
+</script>
