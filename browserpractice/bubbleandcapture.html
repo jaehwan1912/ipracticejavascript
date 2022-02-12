@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<style>
+div {
+    width: 400px;
+    height: 400px;
+    background-color: red;
+}
+p {
+    background-color: blue;
+}
+</style>
+</head>
+
+<script>
+
+</script>
+
+<body>
+<button id="btn">Press the button</button>
+<div id="dv">
+<p id="hehe">hehe</p>
+<p id="hehehe">hehehe</p>
+</div>
+</body>
+
+<script>
+let f1 = (ev) => {
+    console.log("inner-" + ev.target + ", now-" + ev.currentTarget);
+};
+dv.addEventListener('click', f1);
+hehe.addEventListener('click', f1);
+hehehe.addEventListener('click', (ev) => ev.stopImmediatePropagation());
+hehehe.addEventListener('click', f1);
+hehe.addEventListener('click', () => console.log('catch!'), {capture: true});
+
+</script>
+
+</html>
