@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+div {
+    width: 400px;
+    height:400px;
+    border: 10px solid black;
+    background-color: chartreuse;
+}
+
+img {
+    position: relative;
+    transition: 2s;
+}
+</style>
+</head>
+
+<script>
+
+</script>
+
+<body>
+<p id="hehe">hehe the ball be moving tho</p>
+<div id="fi">
+<img id="sq" src="square.png">
+</div>
+<p id="hehe2">moving ball</p>
+
+<script>
+let square = document.querySelector('#sq');
+let field = document.querySelector('#fi');
+square.style.left = 0;
+square.style.top = 0;
+let f = (ev) => {
+    let field = document.querySelector('#fi');
+    let square = document.querySelector('#sq');
+
+    let mouseX = ev.clientX + window.pageXOffset - field.offsetLeft - field.clientLeft;
+    let mouseY = ev.clientY + window.pageYOffset - field.offsetTop - field.clientTop;
+    
+    let posLeft = mouseX - square.width / 2;
+    let posTop = mouseY - square.height / 2;    
+
+    let twoLeft = field.offsetLeft + field.clientLeft;
+    let twoTop = field.offsetTop + field.clientTop;
+
+    posLeft = posLeft > 0 ? posLeft + square.width < field.clientWidth ? posLeft : field.clientWidth - square.width : 0;
+    posTop = posTop > 0 ? posTop + square.height < field.clientHeight ? posTop : field.clientHeight - square.height : 0;
+
+    square.style.left = String(posLeft) + "px";
+    square.style.top = String(posTop) + "px";
+    console.log(square.style.left + " " + square.style.top);
+};
+
+field.addEventListener('click', f);
+
+</script>
+</body>
+</html>
