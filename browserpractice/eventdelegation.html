@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<script>
+
+</script>
+
+<body>
+<button id="btn">Press the button</button>
+<p id="hehe">hehe</p>
+<div id="things">
+    <p>click!</p>
+    <p>click!</p>
+    <p>click!</p>
+    <p>click!</p>
+    <p>click!</p>
+    <p>click!</p>
+    <p>click!</p>
+    <p>click!</p>
+    <p>click!</p>
+    <p>click!</p>
+    <p><strong>strong!</strong></p>
+    <p><small>small...</small></p>
+</div>
+</body>
+
+<script>
+let f = function (ev) {
+    let the_child = ev.target.closest('p');
+
+    if (!the_child) return;
+    let children = this.children;
+
+    for (child of children) {
+        if (child === the_child) {
+            child.style.backgroundColor = "red";
+        } else {
+            child.style.backgroundColor = "";
+        }
+    }
+};
+things.addEventListener('click', f);
+</script>
+
+</html>
