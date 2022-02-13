@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<script>
+
+</script>
+
+<body>
+<button id="btn">Press the button</button>
+<p id="hehe">hehe</p>
+<a id="faker" href="naver.com">Go to naver</a>
+
+<input id="notinputable" value="Hehe try this">
+<div></div>
+<button id="btn" oncontextmenu="alert('nope');return false;">Try right-clicking this button</button>
+</body>
+
+<script>
+let f = (ev) => {
+    ev.preventDefault();
+    alert("Hehe you've been faked");
+};
+faker.addEventListener('click', f);
+let g = (ev) => {
+    ev.preventDefault();
+};
+notinputable.addEventListener('mousedown', g);
+let h = (ev) => {
+    alert("What the");
+}
+notinputable.addEventListener('focusin', h, {once: true});
+
+</script>
+
+</html>
