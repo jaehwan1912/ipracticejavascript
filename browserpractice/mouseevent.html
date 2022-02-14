@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<script>
+
+</script>
+
+<body>
+<button id="btn">Press the button</button>
+<button id="clear" onclick="console.clear();">Clear console</button>
+<p id="hehe">hehe</p>
+<p>placeholder</p>
+<p>placeholder</p>
+<p>placeholder</p>
+<p>placeholder</p>
+<p>placeholder</p>
+<p>placeholder</p>
+<p>placeholder</p>
+<p>placeholder</p>
+<p>placeholder</p>
+<p>placeholder</p>
+<p>placeholder</p>
+<p>placeholder</p>
+<p>placeholder</p>
+<p>placeholder</p>
+<p>placeholder</p>
+</body>
+
+<script>
+let f1 = (ev) => {
+    console.log(ev.type + ' ' + ev.button);
+    console.log('shift: ' + ev.shiftKey + ', alt: ' + ev.altKey + ', ctrl: ' + ev.ctrlKey);
+    console.log('clientpos: ' + ev.clientX + ' ' + ev.clientY + ', pagepos: ' + ev.pageX + ' ' + ev.pageY);
+}
+btn.addEventListener('click', f1);
+btn.addEventListener('mousedown', f1);
+btn.addEventListener('mouseup', f1);
+//btn.addEventListener('mouseover', f1);
+//btn.addEventListener('mouseout', f1);
+//btn.addEventListener('mousemove', f1);
+</script>
+
+</html>
