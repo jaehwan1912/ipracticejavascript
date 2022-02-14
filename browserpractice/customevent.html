@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<script>
+
+</script>
+
+<body>
+<button id="btn">Press the button</button>
+<p id="hehe">hehe</p>
+</body>
+
+<script>
+btn.clickCounter = false;
+btn.doBubble = false;
+let f1 = (ev) => {
+    if (this.clickCounter) {
+        let evenclickevent = new CustomEvent('evenclick' ,{bubbles: this.doBubble, cancelable: false, detail: {}});
+        btn.dispatchEvent(evenclickevent);
+        this.doBubble = !(this.doBubble);
+    } else {
+
+    }
+    this.clickCounter = !(this.clickCounter);
+}
+let f2 = (ev) => {
+    console.log('evenclick event executed');
+    console.log(ev.isTrusted);
+}
+let f3 = (ev) => {
+    console.log('evenclick event bubbled');
+}
+btn.addEventListener('click', f1);
+btn.addEventListener('evenclick', f2);
+document.addEventListener('evenclick', f3);
+
+
+</script>
+
+</html>
