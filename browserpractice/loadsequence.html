@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<script>
+console.log(document.readyState);
+document.addEventListener('readystatechange', () => console.log("State change: " + document.readyState));
+document.addEventListener('DOMContentLoaded', () => console.log("DOMContentLoaded"));
+window.onload = () => console.log('loaded');
+</script>
+
+<body>
+<button id="btn">Press the button</button>
+<p id="hehe">hehe</p>
+<img src="square.png" id="sq1">
+<img src="square.png" id="sq2">
+</body>
+
+<script>
+sq1.onload = () => console.log("sq1 loaded");
+sq2.onload = () => console.log("sq2 loaded");
+</script>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<script>
+document.addEventListener('readystatechange', () => console.log(document.readyState));
+let domloaded = (ev) => {
+    console.log("DOM Content Loaded!");
+    console.log(`${sq.offsetWidth} X ${sq.offsetHeight}`);
+}
+document.addEventListener('DOMContentLoaded', domloaded);
+let loaded = (ev) => {
+    console.log("All loaded!");
+    console.log(`${sq.offsetWidth} X ${sq.offsetHeight}`);
+}
+window.addEventListener('load', loaded);
+
+window.onbeforeunload = () => {
+    return false;
+}
+
+</script>
+
+<body>
+<button id="btn">Press the button</button>
+<p id="hehe">hehe</p>
+<img id="sq" src="square.png">
+</body>
+
+<script>
+
+</script>
+
+</html>
