@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<script>
+
+</script>
+
+<body>
+<button id="btn">Extend to start and end</button>
+<p id="hehe">hehe</p>
+<p id="para1">This is a <b>bold</b> and <i>italic</i> and <small>small</small>. ok lol</p>
+
+<p 
+</body>
+
+<script>
+let f1 = () => {
+    cur = document.getSelection();
+    if (!cur.rangeCount | cur.isCollapsed) return;
+    from = cur.anchorNode;
+    //fromOffset = cur.anchorOffset;
+    to = cur.focusNode;
+    //toOffset = cur.focusOffset;
+
+    //if (from.compareDocumentPosition(to)  
+
+    let r = new Range();
+    r.setStart(from, 0);
+    r.setEnd(to, to.length);
+    if (r.startContainer === r.endContainer & r.startOffset === r.endOffset) {
+        r.setStart(to, 0);
+        r.setEnd(from, from.length);
+    }
+    document.getSelection().removeAllRanges();
+    document.getSelection().addRange(r);
+}
+btn.addEventListener('click', f1);
+</script>
+
+</html>

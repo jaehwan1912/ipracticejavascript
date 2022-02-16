@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<script>
+
+</script>
+
+<body>
+<button id="btn">Press the button</button>
+<button id="btn2">Remove letter below</button>
+<p id="hehe">hehe<strong>hoho</strong>hehe</p>
+</body>
+
+<script>
+let f = (list, observer) => {
+    for (m of list) {
+        console.log(m.type + " " + m.target);
+        if (m.type == "childList") {
+            console.log(m.addedNodes);
+            console.log(m.removedNodes);
+        }
+    }
+};
+let observer = new MutationObserver(f);
+
+observer.observe(hehe, {childList: true, characterData: true, characterDataOldValue: true});
+
+btn.addEventListener('click', () => {hehe.innerHTML = "wut"});
+btn2.addEventListener('click', () => hehe.remove());
+</script>
+
+</html>
